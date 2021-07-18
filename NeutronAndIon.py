@@ -18,6 +18,5 @@ for i in range(0, 700000):
     vy += q* vx * m * gamma / ((x[i] ** 2 + y[i] ** 2) ** (3 / 2))
     x.append(x[i] + vx * dt)
     y.append(y[i] + vy * dt)
-    print(vy)
 plt.plot(x, y)
 plt.show()
