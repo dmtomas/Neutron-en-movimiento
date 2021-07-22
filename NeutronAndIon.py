@@ -14,8 +14,8 @@ dt = 10**(-26)
 x = [-1]
 y = [a]
 for i in range(0, 700000):
-    vx -= q*vy*m*gamma/((x[i]**2 + y[i]**2)**(3/2))
-    vy += q* vx * m * gamma / ((x[i] ** 2 + y[i] ** 2) ** (3 / 2))
+    vx -= q*vy*m*gamma/(2*np.pi((x[i]**2 + y[i]**2)**(3/2)))
+    vy += q* vx * m * gamma / (2* np.pi * ((x[i] ** 2 + y[i] ** 2) ** (3 / 2)))
     x.append(x[i] + vx * dt)
     y.append(y[i] + vy * dt)
 plt.plot(x, y)
